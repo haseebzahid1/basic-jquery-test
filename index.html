@@ -36,6 +36,7 @@
     <a href="#" id="link" class="red">Link</a>
 </div> -->
 
+<p id="pra">this is a p tag</p>
 <div id="box" class="box"></div>
 
 <!-- <input type="text" id="input1"> -->
@@ -44,10 +45,20 @@
     <li>About</li>
     <li>Blog</li>
 </ul> -->
-<ul id="list">
+<!-- <ul id="list">
     <li><span id="span1">Careers</span></li>
     <li><span id="span2">About</span></li>
     <li><span id="span3">Blog</span></li>
+</ul> -->
+<ul id="list">
+    <li>child 1</li>
+    <li>child 2</li>
+    <li id="item1">child 3</li>
+    <li>child 4</li>
+    <li>child 5</li>
+    <li id="item2">child 6</li>
+    <li>child 7</li>
+    <li>child 8</li>
 </ul>
 
 
@@ -159,8 +170,29 @@
 
 // ======= Traversing Html  ===== //\
 
-var list = $("#span1").parent();
-list.css({"border":"1px solid red"})
+// var list = $("#span1").parent();
+// list.css({"border":"1px solid red"})
+
+// var list = $("#span1").parent();
+// list.css({"border":"1px solid red"})
+// ========================== 
+// var list = $("#list").find("#span2");
+// list.css({"border":"1px solid red"})
+// ==========================
+// var list = $("#item1").siblings()
+// list.css({"border":"1px solid red"}) 
+// ========================== 
+// var list = $("#item1").nextAll()
+// list.css({"border":"1px solid red"}) 
+// ========================== 
+// var list = $("#item1").nextUntil("#item2")
+// list.css({"border":"1px solid red"})
+// ========================== 
+// ======== No Conflict  ====== ////
+
+$("#btn1").click(function(){
+    $('#pra').text("Text Changed");
+})
     </script>
 </body>
 </html>
