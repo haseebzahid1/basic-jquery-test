@@ -5,25 +5,162 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basic jquery</title>
-    <link rel="stylesheet" href="../basic-jquery/css/style.css">
     <script src="./jquery-3.6.0.min.js"></script>
+    <!-- <link rel="stylesheet" href="../basic -jquery/css/style.css"> -->
     <!-- <script src="    https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js "></script> -->
+    <style>
+        .box{
+            margin-top: 30px;
+    width: 200px;
+    height: 200px;
+    /* border-radius: 50px; */
+    background-color: purple;
+    
+}
+
+.circle{
+    border-radius: 50%;
+    border: 1px solid red;
+}
+    </style>
 </head>
 
-<button id="btn1">Button1</button>
-<button id="btn2">Button2</button>
-<div id="colored-div" style="background-color: brown; height: 100px; width: 100px;"></div>
+
+
 <body>
     
+<button id="btn1">Button1</button>
+<!-- <button id="btn2">Button2</button> -->
+<!-- <div id="colored-div" style="background-color: brown; height: 100px; width:100%; max-width: 100px;">
+    <p>This is p tag</p>
+    <a href="#" id="link" class="red">Link</a>
+</div> -->
+
+<div id="box" class="box"></div>
+
+<!-- <input type="text" id="input1"> -->
+<!-- <ul id="list">
+    <li>Careers</li>
+    <li>About</li>
+    <li>Blog</li>
+</ul> -->
+<ul id="list">
+    <li><span id="span1">Careers</span></li>
+    <li><span id="span2">About</span></li>
+    <li><span id="span3">Blog</span></li>
+</ul>
+
+
+
+
+
 
     <script>
-$("#btn1").click(function(){
-    $("#colored-div").hide();
-});
+// $("#btn1").click(function(){
+//     $("#colored-div").hide();
+// });
 
-$("#btn2").click(function(){
-    $("#colored-div").show();
-});
+// $("#btn2").click(function(){
+//     $("#colored-div").show();
+// });
+
+
+// ==========================
+
+// $("#btn1").click(function(){
+//     $("#colored-div").fadeIn();
+// });
+
+// $("#btn2").click(function(){
+//     $("#colored-div").fadeOut();
+// });
+
+// ==========================
+
+// $("#btn1").click(function(){
+//     $("#colored-div").slideUp();
+// });
+
+// $("#btn2").click(function(){
+//     $("#colored-div").slideDown();
+// });
+// ==========================
+// $("#btn1").click(function(){
+//     $("#colored-div").toggle();
+// });
+
+// $("#btn2").click(function(){
+//     $("#colored-div").slideToggle();
+// });
+
+// ==========================
+
+// $("#btn1").click(function(){
+//     $("#colored-div1").animate({
+//         opacity:"0.5",
+//         width:"300px",
+//         height:"250px",
+//     },5000);
+// });
+
+// $("#btn2").click(function(){
+//     $("#colored-div1").stop();
+// });
+// ==========================
+// $("#btn1").click(function(){
+//     $("#colored-div").hide(3000, function(){
+//         alert("div hidden");
+//     });
+// });
+// ==========================
+// $("#btn1").click(function(){
+//     $("#colored-div").css("background-color", "red").slideUp(2000);
+// });
+
+// ==========================
+
+// ====== MANIPULATING HTML =======  ////
+
+// $("#btn1").click(function(){
+//     var value = $("#input1").val();
+//     alert(value);
+// });
+
+// ==========================
+// $("#btn1").click(function(){
+//     $("#link").attr({ 
+//         "class":"black",
+//         "href":"https//www.google.com"
+//     })
+// });
+
+// ==========================
+// $("#btn1").click(function(){
+//     $("#list").prepend("<li>Home</li>");
+//     $("#list").append("<li>Contact</li>");
+
+// });
+// ==========================
+// $("#btn1").click(function(){
+//     $("#box").addClass("circle");
+// });  
+// ==========================
+// $("#btn1").click(function(){
+//     $("#box").toggleClass("circle"); 
+// });  
+// ==========================
+// $("#btn1").click(function(){
+//     $("#box").css({
+//         "background-color": "red",
+//         "border":"1px solid purple"
+//     });
+// }); 
+// ========================== 
+
+// ======= Traversing Html  ===== //\
+
+var list = $("#span1").parent();
+list.css({"border":"1px solid red"})
     </script>
 </body>
 </html>
